@@ -1,0 +1,39 @@
+def sezar_şifreleme():
+    mesaj=input("Şifrelenecek metni giriniz: ")
+    mesaj=mesaj.lower()
+
+    alfabe=['a','b','c','ç','d','e','f','g','ğ','h','ı','i','j','k','l','m','n','o','ö','p','r','s','ş','t','u','ü','v','y','z']
+
+    şifrelenmiş_metin=''
+
+    for i in mesaj:
+        if i not in alfabe:
+            del[i]
+        else:
+            şifrelenmiş_metin+=alfabe[alfabe.index(i)+3%29]
+            
+    şifrelenmiş_metin=şifrelenmiş_metin.upper()
+    print("şifrelenmiş metin: ", şifrelenmiş_metin)
+
+
+sezar_şifreleme()
+
+def sezar_şifreleme_çözüm():
+    şifreli_metin=input("Şifresi çözülecek metni giriniz: ")
+    şifreli_metin=şifreli_metin.lower()
+    
+    alfabe=['a','b','c','ç','d','e','f','g','ğ','h','ı','i','j','k','l','m','n','o','ö','p','r','s','ş','t','u','ü','v','y','z']
+
+    orijinal_metin=''
+
+    for i in şifreli_metin:
+        if i not in alfabe:
+            del[i]
+        else:
+            orijinal_metin+=alfabe[alfabe.index(i)-3%29]
+
+    orijinal_metin=orijinal_metin.upper()
+    print("Orijinal metin: ", orijinal_metin)
+
+
+sezar_şifreleme_çözüm()
